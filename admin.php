@@ -7,8 +7,9 @@
         $email=$_POST['email'];
         $password=md5($_POST['password_1']);
 		$password2=md5($_POST['password_2']);
-	
-		$role="User";
+        
+        //assignining the role of the admin during registration period
+		$role="admin";
 
 		// form validation: ensure that the form is correctly filled
 		if (empty($username)) { array_push($errors, "Username is required"); }
@@ -50,7 +51,7 @@
 		<h2>Sign Up</h2>
 	</div>
 	
-	<form method="post" action="sign-up.php">
+	<form method="post" action="admin.php">
 		<div class="input-group">
 			<label>Username</label>
 			<input type="email" name="username" placeholder="enter your username or email here">
